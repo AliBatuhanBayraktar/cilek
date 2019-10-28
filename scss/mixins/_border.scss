@@ -1,0 +1,120 @@
+  /* Background Color Mixin */
+
+.border {
+  border-style: solid;
+  border-width: 1px !important;
+
+  &:before,
+  &:after {
+    overflow:hidden;
+  }
+
+  /* Border Width */
+
+  @for $i from 1 through 20 {
+
+    &.border-width-#{$i} {
+      border-width: #{$i}px !important;
+    }
+
+    &.border-top-width-#{$i} {
+      border-width:0 !important;
+      border-top-width: #{$i}px !important;
+    }
+
+    &.border-right-width-#{$i} {
+      border-width:0 !important;
+      border-right-width: #{$i}px !important;
+    }
+
+    &.border-bottom-width-#{$i} {
+      border-width:0 !important;
+      border-bottom-width: #{$i}px !important;
+    }
+
+    &.border-left-width-#{$i} {
+      border-width:0 !important;
+      border-left-width: #{$i}px !important;
+    }
+
+  }
+
+}
+
+/* Border Radius */
+
+@for $i from 0 through 20 {
+
+  .radius-#{$i}:before,
+  .radius-#{$i}:after,
+  .radius-#{$i} {
+    border-radius: #{$i}px;
+  }
+
+  .top-radius-#{$i}:before,
+  .top-radius-#{$i}:after,
+  .top-radius-#{$i} {
+    border-top-left-radius: #{$i}px;
+    border-top-right-radius: #{$i}px;
+  }
+
+  .right-radius-#{$i}:before,
+  .right-radius-#{$i}:after,
+  .right-radius-#{$i} {
+    border-top-right-radius: #{$i}px;
+    border-bottom-right-radius: #{$i}px;
+  }
+
+  .bottom-radius-#{$i}:before,
+  .bottom-radius-#{$i}:after,
+  .bottom-radius-#{$i} {
+    border-bottom-left-radius: #{$i}px;
+    border-bottom-right-radius: #{$i}px;
+  }
+
+  .left-radius-#{$i}:before,
+  .left-radius-#{$i}:after,
+  .left-radius-#{$i} {
+    border-top-left-radius: #{$i}px;
+    border-bottom-left-radius: #{$i}px;
+  }
+
+  .top-left-radius-#{$i}:before,
+  .top-left-radius-#{$i}:after,
+  .top-left-radius-#{$i} {
+    border-top-left-radius: #{$i}px;
+  }
+
+  .top-right-radius-#{$i}:before,
+  .top-right-radius-#{$i}:after,
+  .top-right-radius-#{$i} {
+    border-top-right-radius: #{$i}px;
+  }
+
+  .bottom-left-radius-#{$i}:before,
+  .bottom-left-radius-#{$i}:after,
+  .bottom-left-radius-#{$i} {
+    border-bottom-left-radius: #{$i}px;
+  }
+
+  .bottom-right-radius-#{$i}:before,
+  .bottom-right-radius-#{$i}:after,
+  .bottom-right-radius-#{$i} {
+    border-bottom-right-radius: #{$i}px;
+  }
+
+}
+
+  .border-radius-standart {
+    border-radius: $border-radius;
+  }
+
+/* Border Color */
+
+@each $name, $color in $colors {
+
+  .border-#{$name} {
+    border-color:map-get($color, mother) !important;
+  }
+
+}

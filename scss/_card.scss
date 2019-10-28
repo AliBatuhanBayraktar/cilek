@@ -1,0 +1,83 @@
+// Card
+
+$cardFontColor      : map_get($white, child);
+$cardBackground     : map_get($white, mother);
+
+$border-style       : solid;
+$border-width       : 2px;
+$border-color       : map_get($primary, mother);
+$border-position    : border-bottom;
+
+$box-shadow-x       : 0px;
+$box-shadow-y       : 0px;
+$box-shadow-blur    : 10px;
+$box-shadow-spread  : 0px;
+$box-shadow-color   : map_get($dark, mother);
+$box-shadow-opacity : 0.5;
+
+.card {
+
+  position: relative;
+  color:$cardFontColor;
+  background:transparent;
+  border:0;
+  #{$border-position}-color: $border-color;
+  #{$border-position}-style: $border-style;
+  #{$border-position}-width: $border-width;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-x, $box-shadow-y, $box-shadow-blur, $box-shadow-spread, rgba($box-shadow-color, $box-shadow-opacity);
+  margin-bottom:$gutter-width;
+
+  &>a {
+    color:$cardFontColor;
+  }
+
+  &:before {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:-1;
+    content: '';
+    background:$cardBackground;
+    border-radius: $border-radius;
+  }
+
+  & .card-header,
+  & .card-footer {
+    background:transparent;
+    border:0;
+    padding:15px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    &:before,
+    &:after {
+      overflow:hidden;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+      margin-bottom:0;
+    }
+
+  }
+
+  & .card-header {
+
+    overflow:hidden;
+
+    & figure {
+      margin:-15px;
+    }
+
+  }
+
+}

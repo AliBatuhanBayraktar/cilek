@@ -1,0 +1,19 @@
+.window-width {
+  width:100vw;
+}
+
+@for $i from 1 through 120 {
+
+  .width-#{$i * 5} {
+    width: #{$i * 5}px;
+  }
+
+  .min-width-#{$i * 5} {
+    min-width: #{$i * 5}px;
+  }
+
+  .max-width-#{$i * 5} {
+    max-width: #{$i * 5}px;
+  }
+
+}

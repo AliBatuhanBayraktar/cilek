@@ -1,0 +1,13 @@
+@for $i from 0 through 100 {
+
+  .opacity-#{$i} {
+    opacity: ( $i / 100 );
+    filter: alpha(opacity=$i)
+  }
+
+  .opacity-bg-#{$i}:before {
+    opacity: ( $i / 100 );
+    filter: alpha(opacity=$i)
+  }
+
+}

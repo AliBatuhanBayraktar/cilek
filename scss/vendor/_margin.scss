@@ -1,0 +1,49 @@
+@for $i from 1 through 150 {
+
+  .margin-#{$i} {
+    margin:#{$i}px !important;
+  }
+
+  .margin-top-#{$i} {
+    margin-top:#{$i}px !important;
+  }
+
+  .margin-offset-top-#{$i} {
+    margin-top:-#{$i}px !important;
+  }
+
+  .margin-right-#{$i} {
+    margin-right:#{$i}px !important;
+  }
+
+  .margin-offset-right-#{$i} {
+    margin-right:-#{$i}px !important;
+  }
+
+  .margin-bottom-#{$i} {
+    margin-bottom:#{$i}px !important;
+  }
+
+  .margin-offset-bottom-#{$i} {
+    margin-bottom:-#{$i}px !important;
+  }
+
+  .margin-left-#{$i} {
+    margin-left:#{$i}px !important;
+  }
+
+  .margin-offset-left-#{$i} {
+    margin-left:-#{$i}px !important;
+  }
+
+  .margin-horizontal-#{$i} {
+    margin-left:#{$i}px !important;
+    margin-right:#{$i}px !important;
+  }
+
+  .margin-vertical-#{$i} {
+    margin-top:#{$i}px !important;
+    margin-bottom:#{$i}px !important;
+  }
+
+}

@@ -1,0 +1,54 @@
+/* Background Color Mixin */
+
+@mixin bg-gradient($name) {
+  background: $name;
+  background: linear-gradient(45deg, darken($name, 10%), lighten($name, 10%));
+}
+
+body {
+  background: map_get($white, mother);
+}
+
+.bg {
+  position:relative;
+  background-color:transparent !important;
+  overflow:visible;
+
+  &:before,
+  &.bg-image:after {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    content:'';
+    transition: background 0.3s, opacity 0.3s;
+  }
+
+  &:before {
+    z-index:-1;
+  }
+
+  &.bg-image:after {
+    z-index:-2;
+  }
+
+}
+
+
+@each $name, $color in $colors {
+
+  .bg-#{$name}:before {
+    background:map-get($color, mother) !important;
+  }
+
+  .bg-hover-#{$name}:hover:before {
+    background:map-get($color, mother) !important;
+  }
+
+  .bg-gradient-#{$name} {
+    @include bg-gradient(map-get($color, mother));
+  }
+
+}
+

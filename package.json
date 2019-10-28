@@ -1,0 +1,52 @@
+{
+  "_args": [
+    [
+      "cilek@4.0.5",
+      "/Users/B.Batuhan/Desktop/Masaüstü/HTML/Arel/ISA"
+    ]
+  ],
+  "_from": "cilek",
+  "_id": "cilek@4.0.7",
+  "_inBundle": false,
+  "_integrity": "sha512-HyQj6tORvNRCayFp4ERrmpa6V2AGoSWcafT44ftEbOUd8plIGw+dWGcJXFNYZOb0tQnfnTc4jhvUXr1++xo2RQ==",
+  "_location": "/cilek",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cilek",
+    "name": "cilek",
+    "escapedName": "cilek",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cilek/-/cilek-4.0.7.tgz",
+  "_shasum": "3153d4e6cbf650300f01d2930653e7c626f7767f",
+  "_spec": "cilek",
+  "_where": "/Users/B.Batuhan/Desktop/Masaüstü/Webpack/Dergi",
+  "author": {
+    "name": "Ali Batuhan Bayraktar"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Bootstrap'ın özelliklerine ek olarak daha geniş yelpaze sunmasını sağlayan bir SCSS kütüphanesi.",
+  "keywords": [
+    "cilek",
+    "bootstrap+",
+    "scss",
+    "color",
+    "palette"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cilek",
+  "scripts": {
+    "test": "cilek test"
+  },
+  "version": "4.0.7"
+}

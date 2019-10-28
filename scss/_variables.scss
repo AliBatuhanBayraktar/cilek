@@ -1,0 +1,246 @@
+/****************************************
+/
+/   Veriables SCSS - Ali Batuhan Bayraktar
+/
+****************************************/
+
+/******
+/
+/ Renkler
+/
+*******/
+
+$transparent: (
+  mother : transparent,
+  child  : #2E3439
+);
+
+$primary: (
+  mother : #00529B,
+  child  : #FBFBFB
+);
+
+$secondary: (
+  mother : #efac20,
+  child  : #FBFBFB
+);
+
+$white: (
+  mother : #FBFBFB,
+  child  : #2E3439
+);
+
+$dirty-white: (
+  mother : #F8F8F8,
+  child  : #2E3439
+);
+
+$grey: (
+  mother : #F1F2F2,
+  child  : #2E3439
+);
+
+$default: (
+  mother : #E4E5E6,
+  child  : #2E3439
+);
+
+$dark-silver: (
+  mother : #CACCCD,
+  child  : #FBFBFB
+);
+
+$grey-mint: (
+  mother : #96999B,
+  child  : #FBFBFB
+);
+
+$dark: (
+  mother : #2E3439,
+  child  : #FBFBFB
+);
+
+$info: (
+  mother : #2aa1e8,
+  child  : #FBFBFB
+);
+
+$success: (
+  mother : #0bbb31,
+  child  : #FBFBFB
+);
+
+$warning: (
+  mother : #ff8b00,
+  child  : #FBFBFB
+);
+
+$danger: (
+  mother : #f4182f,
+  child  : #FBFBFB
+);
+
+$facebook: (
+  mother : #3b5999,
+  child  : #FBFBFB
+);
+
+$twitter: (
+  mother : #55acee,
+  child  : #FBFBFB
+);
+
+$instagram: (
+  mother : #8a3ab9,
+  child  : #FBFBFB
+);
+
+$linkedin: (
+  mother : #0077B5,
+  child  : #FBFBFB
+);
+
+$google-plus: (
+  mother : #dd4b39,
+  child  : #FBFBFB
+);
+
+$google-maps: (
+  mother : #e14e3c,
+  child  : #FBFBFB
+);
+
+$pinterest: (
+  mother : #bd081c,
+  child  : #FBFBFB
+);
+
+$youtube: (
+  mother : #cd201f,
+  child  : #FBFBFB
+);
+
+$vimeo: (
+  mother : #1ab7ea,
+  child  : #FBFBFB
+);
+
+$amazon: (
+  mother : #ff9900,
+  child  : #FBFBFB
+);
+
+$android: (
+  mother : #A4C639,
+  child  : #FBFBFB
+);
+
+$angular: (
+  mother : #c3002f,
+  child  : #FBFBFB
+);
+
+$pdf: (
+  mother : #da1d00,
+  child  : #FBFBFB
+);
+
+$word: (
+  mother : #2c5898,
+  child  : #FBFBFB
+);
+
+$excel: (
+  mother : #1a7243,
+  child  : #FBFBFB
+);
+
+$powerpoint: (
+  mother : #d43b23,
+  child  : #FBFBFB
+);
+
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'white': $white,
+  'dirty-white': $dirty-white,
+  'grey': $grey,
+  'default': $default,
+  'grey-mint': $grey-mint,
+  'dark-silver': $dark-silver,
+  'dark': $dark,
+  'info': $info,
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger,
+);
+
+$buttons: (
+  'transparent': $transparent,
+  'primary': $primary,
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger,
+  'grey': $grey,
+  'dark': $dark,
+);
+
+$alerts: (
+  'info': $info,
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger
+);
+
+/* Heights */
+
+$sm-height: (
+  name  : '-sm',
+  height : 29px,
+  padding : 4px,
+  font-size : 0.875rem
+);
+
+$md-height: (
+  name  : '',
+  height : 34px,
+  padding : 6px,
+  font-size : 1rem
+);
+
+$lg-height: (
+  name  : '-lg',
+  height : 42px,
+  padding : 7px,
+  font-size : 1.25rem
+);
+
+$xl-height: (
+  name  : '-xl',
+  height : 52px,
+  padding : 9px,
+  font-size : 1.5rem
+);
+
+$heights: (
+    md-height  : $md-height,
+    sm-height  : $sm-height,
+    lg-height  : $lg-height,
+    xl-height  : $xl-height
+);
+
+/* Transitions */
+
+$transition : 0.3s;
+
+
+/* Border Radius */
+
+$border-radius         : 5px;
+$button-border-radius  : 5px;
+$form-element-radius   : 10px;
+
+/* gutter-width */
+
+$gutter-width          : 30px;

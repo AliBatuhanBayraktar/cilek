@@ -1,0 +1,82 @@
+// Input Type
+
+$background       : map_get($white, mother);
+
+$border-style     : solid;
+$border-width     : 2px;
+$border-color     : map_get($default, mother);
+$border-position  : border-bottom;
+
+.form-element {
+
+  position:relative;
+  background-color:transparent !important;
+  overflow:hidden;
+  border:0;
+  border-radius: $form-element-radius;
+  #{$border-position}-color: $border-color;
+  #{$border-position}-style: $border-style;
+  #{$border-position}-width: $border-width;
+  margin-bottom: 20px;
+  transition : border-bottom-color $transition;
+
+  &::placeholder {
+    color: darken($background, 0.2);
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: darken($background, 0.2);
+  }
+
+  &::-ms-input-placeholder {
+    color: darken($background, 0.2);
+  }
+
+  &:before {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    content:'';
+    transition: background 0.3s, opacity 0.3s;
+    z-index:-1;
+    background: $background;
+  }
+
+  &.form-info {
+    #{$border-position}-color: map_get($info, mother);
+  }
+
+
+  &.form-success {
+    #{$border-position}-color: map_get($success, mother);
+  }
+
+  &.form-warning {
+    #{$border-position}-color: map_get($warning, mother);
+  }
+
+  & .form-control {
+    border-width: 0;
+  }
+
+
+  @each $name, $height in $heights {
+
+    &.form-element#{map-get($height, name)} {
+
+      & .form-control {
+        height:map-get($height, height);
+        line-height:(map-get($height, height) - (map_get($height, padding) * 2));
+        padding:map_get($height, padding) (map_get($height, padding) * 2);
+        font-size: map_get($height, font-size);
+      }
+
+    }
+
+  }
+
+
+}

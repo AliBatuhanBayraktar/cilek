@@ -1,0 +1,11 @@
+@for $i from 10 through 100 {
+
+  .font-size-#{$i} {
+    font-size: #{$i}px;
+  }
+
+}
+
+a:hover {
+  text-decoration: none;
+}

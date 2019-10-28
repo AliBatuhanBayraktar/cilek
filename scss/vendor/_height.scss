@@ -1,0 +1,23 @@
+.window-height {
+  height:100vh;
+}
+
+@for $i from 1 through 120 {
+
+  .height-#{$i * 5} {
+    height: #{$i * 5}px;
+  }
+
+  .line-height-#{$i * 5} {
+    line-height: #{$i * 5}px;
+  }
+
+  .min-height-#{$i * 5} {
+    min-height: #{$i * 5}px;
+  }
+
+  .max-height-#{$i * 5} {
+    max-height: #{$i * 5}px;
+  }
+
+}

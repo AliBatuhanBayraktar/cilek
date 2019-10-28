@@ -1,0 +1,108 @@
+/* Background Color Mixin */
+
+.btn {
+  position:relative;
+  background-color:transparent !important;
+  border-width: 0;
+  border-radius: $button-border-radius;
+  overflow:hidden;
+  cursor:pointer;
+
+  &:before {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    content:'';
+    transition: background 0.3s, opacity 0.3s;
+  }
+
+  &:before {
+    z-index:-1;
+  }
+
+  @each $name, $color in $buttons {
+
+    &.btn-#{$name},
+    &.btn-#{$name}:not([href]):not([tabindex]) {
+      color:map-get($color, child) !important;
+    }
+
+    &.btn-#{$name}:before,
+    &.btn-#{$name}:not([href]):not([tabindex]):before {
+      background:map-get($color, mother);
+    }
+
+    &.btn-hover-#{$name}:hover:before,
+    &.btn-hover-#{$name}:not([href]):not([tabindex]):hover:before {
+      background:map-get($color, mother);
+    }
+
+    &.btn-outline-#{$name},
+    &.btn-outline-#{$name}:not([href]):not([tabindex]) {
+      color:map-get($color, mother);
+      background:transparent;
+      border-width:1px;
+      border-color:map_get($color, mother);
+
+      &:before {
+        background:map-get($color, child);
+      }
+
+      &:hover {
+        color:map-get($color, child);
+      }
+
+      &:hover:before {
+        background:map-get($color, mother);
+      }
+
+    }
+
+    &.btn-ghost-#{$name},
+    &.btn-ghost-#{$name}:not([href]):not([tabindex]) {
+      color:map-get($color, mother);
+      background:transparent;
+      border-width:1px;
+      border-color:map_get($color, mother);
+
+      &:before {
+        background:transparent;
+      }
+
+      &:hover {
+        color:map-get($color, child);
+      }
+
+      &:hover:before {
+        background:map-get($color, mother);
+      }
+
+    }
+
+  }
+
+
+  @each $name, $height in $heights {
+
+    &.btn#{map-get($height, name)} {
+      height:map-get($height, height);
+      line-height:(map-get($height, height) - (map_get($height, padding) * 2));
+      padding:map_get($height, padding) (map_get($height, padding) * 2);
+      font-size: map_get($height, font-size);
+    }
+
+    &.btn-square.btn#{map-get($height, name)} {
+      width:map-get($height, height);
+      padding:0 !important;
+    }
+
+  }
+
+
+}
+
+
+
+

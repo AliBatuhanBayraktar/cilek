@@ -1,0 +1,40 @@
+#announcement-list-carousel {
+
+  & .announcement-list-carousel-header
+  {
+    height:60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100%;
+    overflow:hidden;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+  & .announcement-list-carousel-body {
+    position:relative;
+    overflow: hidden;
+    height:60px;
+    overflow:hidden;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    &>ul {
+      position: absolute;
+      top:0;
+      list-style:none;
+      margin:0;
+      padding:0;
+      transition: top 0.3s ease-out;
+      &>li {
+        height:60px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &>p {
+          margin:0;
+        }
+      }
+    }
+  }
+}
