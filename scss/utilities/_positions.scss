@@ -4,3 +4,13 @@
   flex-direction:column;
   min-height:100%;
 }
+
+
+.sticky-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index:5;
+  width: 100%;
+}

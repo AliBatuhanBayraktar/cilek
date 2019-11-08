@@ -1,8 +1,11 @@
-#announcement-list-carousel {
 
-  & .announcement-list-carousel-header
+$height: 60px;
+
+.vertical-carousel {
+
+  & .vertical-carousel-header
   {
-    height:60px;
+    height:$height;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -11,10 +14,10 @@
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
   }
-  & .announcement-list-carousel-body {
+  & .vertical-carousel-body {
     position:relative;
     overflow: hidden;
-    height:60px;
+    height:$height;
     overflow:hidden;
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
@@ -26,7 +29,7 @@
       padding:0;
       transition: top 0.3s ease-out;
       &>li {
-        height:60px;
+        height:$height;
         padding: 0 20px;
         display: flex;
         justify-content: center;
@@ -37,4 +40,42 @@
       }
     }
   }
+}
+
+$color: map_get($white, mother);
+
+.horizontal-carousel {
+
+  & .item {
+
+    display:none;
+
+  }
+
+  & .slider-dots {
+    display:flex;
+    justify-content:center;
+    overflow:hidden;
+    list-style:none;
+    margin-top:20px;
+
+    & > li {
+      float:left;
+      width: 40px;
+      height:4px;
+      border-radius:13px;
+      margin:0 5px;
+      cursor:pointer;
+      background:$color;
+      opacity:0.5;
+      transition: opacity 0.3s;
+
+      &.active {
+        opacity:1;
+      }
+
+    }
+
+  }
+
 }
